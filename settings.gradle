@@ -1,0 +1,3 @@
+include ':001_lambda'
+include ':app'
+rootProject.name = "java8Sample"
