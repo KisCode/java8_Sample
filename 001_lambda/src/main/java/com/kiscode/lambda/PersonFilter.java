@@ -26,6 +26,7 @@ public class PersonFilter {
         printPersonsByCheck(personList, new AgeCheckPerson());
         System.out.println("---------------------------------------");
         printPersonsByCheck(personList, new MailCheckPerson());
+//        printPersonsByCheck(personList, person -> false);
         System.out.println("---------------------------------------");
         printPersonsWithPredicate(personList, new Predicate<Person>() {
             @Override

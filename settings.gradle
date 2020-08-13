@@ -1,3 +1,5 @@
+include ':002_functioninterface'
+include ':002_functionInterface'
 include ':001_lambda'
 include ':app'
 rootProject.name = "java8Sample"
