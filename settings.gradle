@@ -1,3 +1,5 @@
+include ':003_stream'
+include ':002_stream'
 include ':002_functioninterface'
 include ':002_functionInterface'
 include ':001_lambda'
