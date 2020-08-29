@@ -1,3 +1,4 @@
+include ':006_datetime'
 include ':005_optionals'
 include ':004_methodreference'
 include ':003_stream'
