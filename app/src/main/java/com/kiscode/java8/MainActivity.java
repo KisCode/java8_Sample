@@ -7,6 +7,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Consumer;
+import java.util.function.Function;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,5 +33,23 @@ public class MainActivity extends AppCompatActivity {
         list.stream().forEach(s -> {
             Log.i("stream() forEach", s);
         });
+
+
+        list.stream().map(new Function<String, String>() {
+            @Override
+            public String apply(String s) {
+                return "String is " + s;
+            }
+        }).forEach(new Consumer<String>() {
+            @Override
+            public void accept(String s) {
+                Log.i("string", s);
+            }
+        });
+
+        //lambda表达式实现
+        list.stream().map(s -> "String is " + s)
+                .forEach(s ->
+                        Log.i("string", s));
     }
 }
