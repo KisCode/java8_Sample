@@ -1,8 +1,8 @@
+include ':006_datetime'
+include ':005_optionals'
 include ':004_methodreference'
 include ':003_stream'
-include ':002_stream'
 include ':002_functioninterface'
-include ':002_functionInterface'
 include ':001_lambda'
 include ':app'
 rootProject.name = "java8Sample"
