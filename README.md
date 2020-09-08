@@ -24,13 +24,26 @@ Android Studio 3.0 后 新增的DEX编译器D8通过desugaring的过程能够支
 #### 1. 在 app/build.gradle文件 android 节点下指定java版本为1.8
 ```groovy
 compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+    //支持新版java Api
+    coreLibraryDesugaringEnabled true
+
+    //指定java sdk版本为 1.8
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+}
+```
+
+#### 2. 在app/build.gradle文件的android/defaultConfig节点下开启multiDexEnabled
+
+```
+defaultConfig {
+        //多dex文件开启
+        multiDexEnabled true
     }
 ```
 
 
-#### 2. 在 app/build.gradle dependencies 节点下添加引用desugaring engine 扩展，从而实现java 8语法糖
+#### 3. 在 app/build.gradlee dependencies 节点下添加引用desugaring engine 扩展，从而实现java 8语法糖
 ```
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
